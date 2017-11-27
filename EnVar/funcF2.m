@@ -15,5 +15,5 @@ f = real([sqrt(.5)*x; f]);
 
 if nargout >1
     [~,M] = lmodel(trajectory,dt);
-    J = [sqrt(.5)*eye(n); sqrt(.5)*sqrtm(R)\(H*M)];
+    J = [sqrt(.5)*eye(n); sqrt(.5)*sqrtm(R)\(H*M*Lb)];
 end
